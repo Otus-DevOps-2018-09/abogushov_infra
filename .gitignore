@@ -17,3 +17,11 @@ jdauphant.nginx
 
 # Python
 .venv/
+
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
