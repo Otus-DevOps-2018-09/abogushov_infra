@@ -19,6 +19,7 @@
 Применение провижионинга к уже запущенной машине:
 
 ```bash
+vagrant provision appserver
 vagrant provision dbserver
 ```
 
