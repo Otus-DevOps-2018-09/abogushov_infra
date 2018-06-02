@@ -14,6 +14,7 @@ vault.key
 
 # Ansible community roles
 jdauphant.nginx
+ansible/roles/db/
 
 # Python
 .venv/
