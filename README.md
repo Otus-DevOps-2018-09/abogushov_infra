@@ -15,6 +15,8 @@
 - Созданы `vagrant` файл с описанием двух виртуальных машин.
 - Добавлен `ansible` провижионер.
 - Параметризован пользователь под которым происходит деплой приложения.
+- Добавлен конфиг для `nginx` в `vagrant` конфигурацию.
+- Добавлены инфрастуктурные тесты через `molecule`.
 
 Применение провижионинга к уже запущенной машине:
 
@@ -40,6 +42,43 @@ vagrant up
 ```bash
 vagrant destroy -f
 ```
+
+Пример создания тестового сценария:
+
+```bash
+molecule init scenario --scenario-name default -r db -d vagrant
+```
+
+Создание VM для тестирования:
+
+```bash
+molecule create
+```
+
+Список созданных VM:
+
+```bash
+molecule list
+```
+
+Логин в созданную машину
+
+```bash
+molecule login -h instance
+```
+
+Применяем `playbook` 
+
+```bash
+molecule converge
+```
+
+Тестирование:
+
+```bash
+molecule verify
+```
+
 
 ## Домашняя работа 11
 
